@@ -1,0 +1,3 @@
+PyGithub
+git+https://github.com/Doist/todoist-python.git@master
+pyyaml

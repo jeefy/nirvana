@@ -1,0 +1,29 @@
+github:
+  query: involves:jeefy is:open
+  defaultLabel: GitHub
+  defaultProject: GitHub Misc
+  labelMap:
+    kubernetes: 
+      - kubernetes
+    orchestructure: 
+      - orchestructure
+      - meetups
+  projectMap: 
+    kubernetes: k/misc # Kubernetes catch-all
+    orchestructure: Orchestructure
+    kubernetes/dashboard: k/sig-ui
+    kubernetes-sigs/dashboard-metrics-scraper: k/sig-ui
+    kubernetes/community: k/sig-contribex
+    slack-infra: k/sig-contribex # Match anything with slack-infra in the title
+    kubernetes-sigs/slack-infra: k/sig-contribex
+    kubernetes-sigs/kube-batch: k/sig-scheduling
+    release-notes: k/sig-release # Match anything with release-notes in the title
+    kubernetes/release: k/sig-release
+    kubernetes/sig-release: k/sig-release
+targetProcess:
+  url: https://umarcts.tpondemand.com
+  query: AssignedUser.Where(it is Me) and EntityState.IsFinal!=true
+  defaultParentProject: ARC-TS
+  defaultLabel: TargetProcess
+  labels:
+    - UMich
