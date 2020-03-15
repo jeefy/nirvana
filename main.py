@@ -275,11 +275,13 @@ def main():
     logging.info('Oh hi {}!'.format(api.state['user']['full_name']))
     logging.debug(api['items'])
 
-    syncWithGithub(api, cfg)
-    api.commit()
+    if 'github' in cfg:
+        syncWithGithub(api, cfg)
+        api.commit()
 
-    syncWithTargetprocess(api, cfg)
-    api.commit()
+    if 'targetProcess' in cfg:
+        syncWithTargetprocess(api, cfg)
+        api.commit()
     
     logging.debug(api)
 
